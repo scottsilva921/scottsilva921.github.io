@@ -6,21 +6,27 @@
 
 		<link rel="stylesheet" type="text/css" href="style.css">
 
-
+		<script type="text/javascript" src="script.js"></script>
 
 	</head>
 
 	<body>
-		<div class="divHead1">
-			<img id="imglogo" src="https://seeklogo.com/images/H/hd-filmes-logo-4F7B194314-seeklogo.com.png">
+		<div id="mySidenav" class="sidenav">
+		  <a href="#">Top IMDb</a>
+		  <a href="#">Top Metacritic</a>
+		  <a href="#">Top Netflix Original</a>
+		  <a href="#">Sobre</a>
 		</div>
 
-		<div class="divHead2">
-			<ul>
-			  <li><a href="index.html">Home</a></li>
-			  <li><a href="">Top 10 IMDb</a></li>
-			  <li><a href="">Top 10 Metacritic</a></li>
-			</ul>
+	<div id="main">	
+		<div class="divHead1">
+			<a href="index.html"><img id="imglogo" src="https://seeklogo.com/images/H/hd-filmes-logo-4F7B194314-seeklogo.com.png"></a>
+
+			<div class="container" onclick="openNav();barsX(this)">
+	  			<div class="bar1"></div>
+	  			<div class="bar2"></div>
+	  			<div class="bar3"></div>
+			</div>
 		</div>
 
 		<div class="nav1">
@@ -45,7 +51,7 @@
 			<img id="imgfooter" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Metacritic_M.png">
 			
 		</div>
-
+	</div>
 
 	</body>
 
