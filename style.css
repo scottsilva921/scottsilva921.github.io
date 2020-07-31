@@ -125,6 +125,9 @@ body{
 /***************************************/
 
 
+/***************************************/
+
+
 .divHead1{
 	position: -webkit-sticky;
     position: sticky;
@@ -147,6 +150,7 @@ body{
 
 .nav1{
 	padding: 40px;
+	text-align: center;
 }
 
 .footer{
@@ -186,4 +190,15 @@ body{
 
 #capas{
 	height: 190px;
+	padding: 5px;
+}
+
+#capas:hover{
+	transition-duration: 0.4s;
+	/*filter: opacity(85%);*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+#play{
+	height: 40px;
 }
