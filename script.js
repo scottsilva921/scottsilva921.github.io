@@ -44,3 +44,12 @@ window.onclick = function(event) {
     }
   }
 }
+
+function imgHover(){
+	document.getElementById("w1").innerHTML = "<img id='play' src=https://image.flaticon.com/icons/png/512/0/375.png>";
+}
+
+function imgOut(){
+	var o = document.getElementById("play");
+	o.remove();
+}
