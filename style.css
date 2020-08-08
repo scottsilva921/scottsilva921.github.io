@@ -8,6 +8,18 @@ body{
 	font-family: Calibri;
 	}
 
+.divHead1{
+	position: -webkit-sticky;
+    position: sticky;
+	text-align: center;
+	background-color: #1C1C1C;
+	opacity: 90%;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	}
+
 /*****************************/
 
 .container {
@@ -43,7 +55,7 @@ body{
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 10; /* Stay on top */
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
@@ -79,7 +91,7 @@ body{
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -124,19 +136,46 @@ body{
 
 /***************************************/
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 42%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+}
 
 /***************************************/
 
-
-.divHead1{
-	position: -webkit-sticky;
-    position: sticky;
-	text-align: center;
-	background-color: #1C1C1C;
-	opacity: 90%;
-	padding: 20px;
-	top: 0;
-	}
 
 
 
@@ -151,6 +190,15 @@ body{
 .nav1{
 	padding: 40px;
 	text-align: center;
+}
+
+#div1{
+	padding-bottom: 20px;
+}
+
+#div2{
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 .footer{
@@ -185,11 +233,11 @@ body{
 
 
 #pages{
-	text-align: center;
+	text-align: left;
 	}
 
 #capas{
-	height: 190px;
+	height: 150px;
 	padding: 5px;
 }
 
@@ -199,6 +247,35 @@ body{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
+#capas1{
+	height: 200px;
+	padding: 5px;
+}
+
+#capas1:hover{
+	transition-duration: 0.4s;
+	/*filter: opacity(85%);*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
 #play{
 	height: 40px;
+}
+
+#title{
+	text-align: left;
+	font-size: 25px;
+}
+
+#linkD{
+	text-decoration: none;
+	color: black;
+}
+
+#linkD:active{
+	color: #FF6347;
+}
+
+#linkD:hover{
+	color: 	#B22222;
 }
