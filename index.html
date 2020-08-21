@@ -10,25 +10,26 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="icon" href="https://images.vexels.com/media/users/3/153232/isolated/preview/c3bcb676107e330558ccc68f8e1cf7d5---cone-plana-do-player-de-filme-by-vexels.png" type="image/jpg">
+		<link rel="icon" href="imagens/iconscott.png" type="image/jpg">
 
 
 	</head>
 
-	<body>
+	<body onload="load()">
 		<div id="mySidenav" class="sidenav">
 			<a href="filmes.html">Filmes</a>
 			<a href="series.html">Séries</a>
 			<a href="topimdb.html">Top IMDb</a>
 			<a href="#">Top Metacritic</a>
 			<a href="topnetflixoriginal.html">Top Netflix Original</a>
+			<a href="recomendacoes.html">Recomendados por Scott</a>
 			<a href="#">Sobre</a>
 		</div>
 
 
-	<div id="main">
-		<div class="divHead1">
-			<img id="imglogo" src="https://seeklogo.com/images/H/hd-filmes-logo-4F7B194314-seeklogo.com.png">
+	<div id="main" onmousewheel="tamNavBar()">
+		<div id="idHead" class="divHead1">
+			<img id="imglogo" src="imagens/logoscott.png">
 
 			<div class="container" onclick="openNav();barsX(this)">
 	  			<div class="bar1"></div>
@@ -38,57 +39,464 @@
 
 		</div>
 
-		<div class="nav1">
+		<div id="idNav1" class="nav1">
 			<div id="pages">
 
-				<h1>Filmes</h1>
+				<h1 id="t">Filmes</h1>
 				<hr>
 
 				<div id="div1">
-					<h1 id="title"><a id="linkD" href="tarantino.html">Quentin Tarantino</a></h1>
+					<h1 id="title"><a id="linkD" href="tarantino.html" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Quentin Tarantino')">Quentin Tarantino</a></h1>
 					<div class="tooltip">
-						<a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!A0FDUcEo7fBw" target="_blanck"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/e/e1/Reservoir_Dogs_1992.jpg" alt="Cães De Aluguel"></a><span class="tooltiptext">Cães de Aluguel <br>(1992)</span>
+						<div class="container1" onmouseover="filmeOver('f1', 'c1', 's1')" onmouseout="filmeOut('f1', 'c1', 's1')">
+							<a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!A0FDUcEo7fBw" target="_blanck"><div id="f1"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/e/e1/Reservoir_Dogs_1992.jpg" alt="Cães De Aluguel"></div></a><span class="tooltiptext">Cães de Aluguel <br>(1992)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!A0FDUcEo7fBw" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div><br>
+							</div>
+
+							<div id="c1" class="container2" style="width: 81px; left:9%">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0105236/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/reservoir_dogs" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/reservoir-dogs" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s1" class="container2" style="width: 81px; left:9%">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>9/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+								
+						</div>
 					</div>
 					
 					<div class="tooltip">
-						<a href="https://scottsilva921.cincopa.com/watch/AEPAZtOSs0AH" target="_blanck"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ea/Jackieposter.jpg/200px-Jackieposter.jpg" alt="Jackie Brown"></a><span class="tooltiptext">Jackie Brown <br>(1997)</span>
+						<div class="container1" onmouseover="filmeOver('f2', 'c2', 's2')" onmouseout="filmeOut('f2', 'c2', 's2')">
+							<a href="https://scottsilva921.cincopa.com/watch/AEPAZtOSs0AH" target="_blanck"><div id="f2"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ea/Jackieposter.jpg/200px-Jackieposter.jpg" alt="Jackie Brown"></div></a><span class="tooltiptext">Jackie Brown <br>(1997)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://scottsilva921.cincopa.com/watch/AEPAZtOSs0AH" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c2" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0119396/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/jackie_brown" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/jackie-brown" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s2" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
 					</div>
 						
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcNDZjk3u8ot" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/16/01/07/20/59/207268.jpg" alt="Os Oito Odiados"></a><span class="tooltiptext">Os Oito Odiados <br>(2015)</span>
+						<div class="container1" onmouseover="filmeOver('f3', 'c3', 's3')" onmouseout="filmeOut('f3', 'c3', 's3')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcNDZjk3u8ot" target="_blanck"><div id="f3"><img id="capas" src="https://br.web.img3.acsta.net/pictures/16/01/07/20/59/207268.jpg" alt="Os Oito Odiados"></div></a><span class="tooltiptext">Os Oito Odiados <br>(2015)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcNDZjk3u8ot" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c3" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt3460252/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/the_hateful_eight" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-hateful-eight" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s3" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
 					</div>
+
+					<div class="tooltip">
+						<div class="container1" onmouseover="filmeOver('f4', 'c4', 's4')" onmouseout="filmeOut('f4', 'c4', 's4')">
+							<a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!AsID8hk7PIz5" target="_blanck"><div id="f4"><img id="capas" src="https://br.web.img3.acsta.net/pictures/19/08/06/21/50/5749668.jpg" alt="Era Uma Vez Em... Hollywood"></div></a><span class="tooltiptext">Era Uma Vez Em... HollyWood <br>(2019)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!AsID8hk7PIz5" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c4" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/once_upon_a_time_in_hollywood" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/once-upon-a-time-in-hollywood" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s4" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>9.2/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div id="div1">
+					<h1 id="title"><a id="linkD" href="tarantino.html" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Martin Scorsese')">Martin Scorsese</a></h1>
+
+					<div class="tooltip">
+
+						<div class="container1" onmouseover="filmeOver('f17', 'c17', 's17')" onmouseout="filmeOut('f17', 'c17', 's17')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AUDDWgU-EbhF" target="_blanck"><div id="f17"><img id="capas" src="https://cineplayers.com/sites/default/files/posters/3098_poster.jpg" alt="Caminhos Perigosos"></div></a><span class="tooltiptext">Caminhos Perigosos <br>(1973)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AUDDWgU-EbhF" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c17" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0070379/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/mean_streets" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/mean-streets" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s17" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tooltip">
+
+						<div class="container1" onmouseover="filmeOver('f16', 'c16', 's16')" onmouseout="filmeOut('f16', 'c16', 's16')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AMIDqg0-767J" target="_blanck"><div id="f16"><img id="capas" src="https://br.web.img3.acsta.net/medias/nmedia/18/96/57/40/20476299.jpg" alt="O Rei Da Comédia"></div></a><span class="tooltiptext">O Rei Da Comédia <br>(1982)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AMIDqg0-767J" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c16" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0085794/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/1011623-king_of_comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-king-of-comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s16" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8.8/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<div class="tooltip">
+						<div class="container1" onmouseover="filmeOver('f5', 'c5', 's5')" onmouseout="filmeOut('f5', 'c5', 's5')">
+							<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!A0LDJikdwtJu" target="_blanck"><div id="f5"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/7/7c/GoodfellasPoster.jpg/250px-GoodfellasPoster.jpg" alt="Os Bons Companheiros"></div></a><span class="tooltiptext">Os Bons Companheiros <br>(1990)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!A0LDJikdwtJu" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c5" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0099685/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/goodfellas" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/goodfellas" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s5" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tooltip">
+
+						<div class="container1" onmouseover="filmeOver('f19', 'c19', 's19')" onmouseout="filmeOut('f19', 'c19', 's19')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AoPDCiEIOfnN" target="_blanck"><div id="f19"><img id="capas" src="https://br.web.img2.acsta.net/pictures/16/12/20/13/08/103918.jpg" alt="Silêncio"></div></a><span class="tooltiptext">Silêncio <br>(2016)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AoPDCiEIOfnN" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c19" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0070379/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/mean_streets" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/mean-streets" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s19" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="div1">
+					<h1 id="title"><a id="linkD" href="" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Irmãos Coen')">Irmãos Coen</a></h1>
+
+					<div class="tooltip">
+
+						<div class="container1" onmouseover="filmeOver('f6', 'c6', 's6')" onmouseout="filmeOut('f6', 'c6', 's6')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AIBDng0uLCd3" target="_blanck"><div id="f6"><img id="capas" src="https://br.web.img3.acsta.net/pictures/16/01/07/17/17/420642.png" alt="Ave, César!"></div></a><span class="tooltiptext">Ave, César! <br>(2016)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AIBDng0uLCd3" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c6" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/once_upon_a_time_in_hollywood" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/once-upon-a-time-in-hollywood" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s6" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8.6/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="tooltip">
+						<div class="container1" onmouseover="filmeOver('f7', 'c7', 's7')" onmouseout="filmeOut('f7', 'c7', 's7')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AgHDdjUZa6ch" target="_blanck"><div id="f7"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/01/22/21/46/481930.jpg" alt="Balada de um Homem Comum"></div></a><span class="tooltiptext" style="min-width: 150px; left: 60%;">Inside Llewyn Davis: Balada de um Homem Comum <br>(2013)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AgHDdjUZa6ch" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c7" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0099685/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/goodfellas" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/goodfellas" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s7" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					
-					<div class="tooltip">
-						<a href="https://scottsilva921.cincopa.com/watch/A4HAcLOLOO68!AsID8hk7PIz5" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/19/08/06/21/50/5749668.jpg" alt="Era Uma Vez Em... Hollywood"></a><span class="tooltiptext">Era Uma Vez Em... HollyWood <br>(2019)</span>
-					</div>
-
 				</div>
 
 				<div id="div1">
-					<h1 id="title"><a id="linkD" href="tarantino.html">Martin Scorsese</a></h1>
-					<div class="tooltip">
-						<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!A0LDJikdwtJu" target="_blanck"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/7/7c/GoodfellasPoster.jpg/250px-GoodfellasPoster.jpg" alt="Cães De Aluguel"></a><span class="tooltiptext">Os Bons Companheiros <br>(1990)</span>
-					</div>
+					<h1 id="title"><a id="linkD" href="" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Paul Thomas Anderson')">Paul Thomas Anderson</a></h1>
 
+					<div class="tooltip">
+
+						<div class="container1" onmouseover="filmeOver('f15', 'c15', 's15')" onmouseout="filmeOut('f15', 'c15', 's15')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!A8PD-jkptGZ1" target="_blanck"><div id="f15"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/1/1b/Punchdrunk.jpg/200px-Punchdrunk.jpg" alt="Embriagado de Amor"></div></a><span class="tooltiptext">Embriagado de Amor<br>(2002)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!A8PD-jkptGZ1" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c15" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0272338/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/punchdrunk_love" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/punch-drunk-love" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s15" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:9%; top:75%"><a>Não Assistido</a></div><div id="filmeIMDb" style="left:10%; top:75%; width:160%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div id="div1">
-					<h1 id="title"><a id="linkD" href="edgarwright.html">Edgar Wright</a></h1>
+					<h1 id="title"><a id="linkD" href="edgarwright.html" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Edgar Wright')">Edgar Wright</a></h1>
 
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><img id="capas" src="https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWXMZDNN/image?locale=pt-br&mode=crop&purposes=BoxArt&q=90&h=225&w=150&format=jpg" alt="Todo Mundo Quase Morto"></a><span class="tooltiptext">Todo Mundo Quase Morto <br>(2004)</span>
+
+						<div class="container1" onmouseover="filmeOver('f8', 'c8', 's8')" onmouseout="filmeOut('f8', 'c8', 's8')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><div id="f8"><img id="capas" src="https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWXMZDNN/image?locale=pt-br&mode=crop&purposes=BoxArt&q=90&h=225&w=150&format=jpg" alt="Todo Mundo Quase Morto"></div></a><span class="tooltiptext">Todo Mundo Quase Morto <br>(2004)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c8" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0365748/?ref_=fn_al_tt_1" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/shaun_of_the_dead" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/shaun-of-the-dead" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s8" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/05/06/50/401711.jpg" alt="Chumbo Grosso"></a><span class="tooltiptext">Chumbo Grosso <br>(2007)</span>
+
+						<div class="container1" onmouseover="filmeOver('f9', 'c9', 's9')" onmouseout="filmeOut('f9', 'c9', 's9')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><div id="f9"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/05/06/50/401711.jpg" alt="Chumbo Grosso"></div></a><span class="tooltiptext">Chumbo Grosso <br>(2007)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c9" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0425112/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/hot_fuzz" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/hot-fuzz" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s9" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8.2/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/03/20/57/486364.jpg" alt="Heróis de Ressaca"></a><span class="tooltiptext">Heróis de Ressaca <br>(2013)</span>
+
+						<div class="container1" onmouseover="filmeOver('f10', 'c10', 's10')" onmouseout="filmeOut('f10', 'c10', 's10')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><div id="f10"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/03/20/57/486364.jpg" alt="Heróis de Ressaca"></div></a><span class="tooltiptext">Heróis de Ressaca <br>(2013)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c10" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt1213663/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/the_worlds_end" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-worlds-end" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s10" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>7.2/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tooltip">
-						<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcGD7j0GkRUs" target="_blanck"><img id="capas" src="https://br.web.img2.acsta.net/pictures/17/07/10/19/10/576841.jpg" alt="Em Ritmo De Fuga"></a><span class="tooltiptext">Em Ritmo de Fuga <br>(2017)</span>
+
+						<div class="container1" onmouseover="filmeOver('f11', 'c11', 's11')" onmouseout="filmeOut('f11', 'c11', 's11')">
+							<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcGD7j0GkRUs" target="_blanck"><div id="f11"><img id="capas" src="https://br.web.img2.acsta.net/pictures/17/07/10/19/10/576841.jpg" alt="Em Ritmo de Fuga"></div></a><span class="tooltiptext">Em Ritmo de Fuga <br>(2017)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcGD7j0GkRUs" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c11" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt3890160/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/baby_driver" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/baby-driver" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s11" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -97,15 +505,90 @@
 				<div id="div1">
 					<h1 id="title">Three Flavours Cornetto Trilogy</h1>
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><img id="capas" src="https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWXMZDNN/image?locale=pt-br&mode=crop&purposes=BoxArt&q=90&h=225&w=150&format=jpg" alt="Todo Mundo Quase Morto"></a><span class="tooltiptext">Todo Mundo Quase Morto <br>(2004)</span>
+
+						<div class="container1" onmouseover="filmeOver('f12', 'c12', 's12')" onmouseout="filmeOut('f12', 'c12', 's12')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><div id="f12"><img id="capas" src="https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWXMZDNN/image?locale=pt-br&mode=crop&purposes=BoxArt&q=90&h=225&w=150&format=jpg" alt="Todo Mundo Quase Morto"></div></a><span class="tooltiptext">Todo Mundo Quase Morto <br>(2004)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!A8MD5iU_5szB" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c12" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0365748/?ref_=fn_al_tt_1" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/shaun_of_the_dead" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/shaun-of-the-dead" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s12" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/05/06/50/401711.jpg" alt="Chumbo Grosso"></a><span class="tooltiptext">Chumbo Grosso <br>(2007)</span>
+
+						<div class="container1" onmouseover="filmeOver('f13', 'c13', 's13')" onmouseout="filmeOut('f13', 'c13', 's13')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><div id="f13"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/05/06/50/401711.jpg" alt="Chumbo Grosso"></div></a><span class="tooltiptext">Chumbo Grosso <br>(2007)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcBDeiUp5kvv" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c13" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0425112/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/hot_fuzz" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/hot-fuzz" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s13" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8.2/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tooltip">
-						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/03/20/57/486364.jpg" alt="Heróis de Ressaca"></a><span class="tooltiptext">Heróis de Ressaca <br>(2013)</span>
+
+						<div class="container1" onmouseover="filmeOver('f14', 'c14', 's14')" onmouseout="filmeOut('f14', 'c14', 's14')">
+							<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><div id="f14"><img id="capas" src="https://br.web.img3.acsta.net/pictures/14/09/03/20/57/486364.jpg" alt="Heróis de Ressaca"></div></a><span class="tooltiptext">Heróis de Ressaca <br>(2013)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AcLD1iki9wPZ" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c14" class="container2" >
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt1213663/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/the_worlds_end" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-worlds-end" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s14" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>7.2/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 					
 				</div>
@@ -113,14 +596,95 @@
 				<div id="div1">
 					<h1 id="title">David Mackenzie</h1>
 					<div class="tooltip">
-						<a href="https://scottsilva930.cincopa.com/watch/A4HAcLOLOO68!A4DDKjk2cNcK" target="_blanck"><img id="capas" src="https://1.bp.blogspot.com/-Y_vDlGwsX5o/WGEDxq5PCnI/AAAAAAAAAKI/4qN2VN8XafUQILLFgNkApXm3kVjBkzRDgCLcB/s1600/HELL-OR-HIGH-WATER-posterWEB.jpg" alt="A Qualquer Custo"></a><span class="tooltiptext"> A Qualquer Custo <br>(2016)</span>
+
+						<div class="container1" onmouseover="filmeOver('f21', 'c21', 's21')" onmouseout="filmeOut('f21', 'c21', 's21')">
+							<a href="https://scottsilva930.cincopa.com/watch/A4HAcLOLOO68!A4DDKjk2cNcK" target="_blanck"><div id="f21"><img id="capas" src="https://1.bp.blogspot.com/-Y_vDlGwsX5o/WGEDxq5PCnI/AAAAAAAAAKI/4qN2VN8XafUQILLFgNkApXm3kVjBkzRDgCLcB/s1600/HELL-OR-HIGH-WATER-posterWEB.jpg" alt="A Qualquer Custo"></div></a><span class="tooltiptext">A Qualquer Custo <br>(2016)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://scottsilva930.cincopa.com/watch/A4HAcLOLOO68!A4DDKjk2cNcK" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c21" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0085794/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/1011623-king_of_comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-king-of-comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s21" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>9/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+
 
 				<div id="div1">
 					<h1 id="title">Noah Baumbach</h1>
 					<div class="tooltip">
-						<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcKDXgEE7d5b" target="_blanck"><img id="capas" src="https://br.web.img2.acsta.net/pictures/18/05/19/00/24/1721188.jpg" alt="Os Meyerowitz"></a><span class="tooltiptext"> Os Meyerowitz <br>(2017)</span>
+						<div class="container1" onmouseover="filmeOver('f18', 'c18', 's18')" onmouseout="filmeOut('f18', 'c18', 's18')">
+							<a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcKDXgEE7d5b" target="_blanck"><div id="f18"><img id="capas" src="https://br.web.img2.acsta.net/pictures/18/05/19/00/24/1721188.jpg" alt="Os Meyerowitz"></div></a><span class="tooltiptext">Os Meyerowitz <br>(2017)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://u725144.cincopa.com/watch/A4HAcLOLOO68!AcKDXgEE7d5b" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c18" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0085794/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/1011623-king_of_comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/the-king-of-comedy" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s18" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:22%; top:75%"><a>8.6/10</a></div><div id="filmeIMDb" style="left:10%; top:75%"><img id="icon" src="https://purepng.com/public/uploads/large/purepng.com-golden-starstargeometricallydecagonconcavestardomgold-1421526502142ozols.png"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="div1">
+					<h1 id="title">Comédia</h1>
+					<div class="tooltip">
+						<div class="container1" onmouseover="filmeOver('f20', 'c20', 's20')" onmouseout="filmeOut('f20', 'c20', 's20')">
+							<a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AsODaj0Cl7HG" target="_blanck"><div id="f20"><img id="capas" src="https://br.web.img3.acsta.net/medias/nmedia/18/87/30/11/19874082.jpg" alt="Trovâo Tropical"></div></a><span class="tooltiptext">Trovão Tropical <br>(2008)</span>
+							<div class="overlay">
+								<div id="filmeHover"><a href="https://rabevo9820.cincopa.com/watch/A4HAcLOLOO68!AsODaj0Cl7HG" target="_blanck"><img id="play" src="https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Play-PNG-Transparent-Image-500x571.png"></a></div>
+							</div>
+
+							<div id="c20" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb"><a href="https://www.imdb.com/title/tt0942385/?ref_=nv_sr_srsg_0" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png"></a></div>
+								</div>
+								<div class="overlay">
+									<div id="filmeIMDb" style="left: 22%"><a href="https://www.rottentomatoes.com/m/tropic_thunder" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png"></a></div>
+								</div>
+
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:34%"><a href="https://www.metacritic.com/movie/tropic-thunder" target="_blanck"><img id="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png"></a></div>
+								</div>
+							</div>
+
+							<div id="s20" class="container2">
+								<div class="overlay">
+									<div id="filmeIMDb" style="left:8%; top:75%"><a>Não Assistido</a></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -132,14 +696,14 @@
 				</div>
 
 				<div id="div1">
-					<h1 id="title"><a id="linkD" href="dreamworks.html">DreamWorks</a></h1>
+					<h1 id="title"><a id="linkD" href="dreamworks.html" onmouseover="linkOver(this)" onmouseout="linkOut(this,'DreamWorks')">DreamWorks</a></h1>
 					<div class="tooltip">
 						<a href="https://scottsilva921.cincopa.com/watch/AcHAltu0tQtF" target="_blanck"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/e6/Shrek_Poster.jpg/215px-Shrek_Poster.jpg" alt="Shrek"></a><span class="tooltiptext">Shrek (2001)</span>
 					</div>
 				</div>
 
 				<div id="div1">
-					<h1 id="title"><a id="linkD" href="topnetflixoriginal.html">Netflix Original</h1>
+					<h1 id="title"><a id="linkD" href="topnetflixoriginal.html" onmouseover="linkOver(this)" onmouseout="linkOut(this,'Netflix Original')">Netflix Original</h1>
 					<div class="tooltip">
 						<a href="https://u855900.cincopa.com/watch/A4HAcLOLOO68!AMDDNi08m85v" target="_blanck"><img id="capas" src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a7/Uncut_Gems_poster.jpg/200px-Uncut_Gems_poster.jpg"></a><span class="tooltiptext">Joias Brutas <br>(2019)</span>
 					</div>
