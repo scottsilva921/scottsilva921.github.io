@@ -152,7 +152,7 @@ body{
   position: absolute;
   z-index: 1;
   bottom: 100%;
-  left: 42%;
+  left: 90%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -239,6 +239,7 @@ body{
 #capas{
 	height: 150px;
 	padding: 5px;
+	display: block;
 }
 
 #capas:hover{
@@ -252,14 +253,9 @@ body{
 	padding: 5px;
 }
 
-#capas1:hover{
-	transition-duration: 0.4s;
-	/*filter: opacity(85%);*/
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 5px rgba(0, 0, 0, 0.2);
-}
 
 #play{
-	height: 40px;
+	height: 30px;
 }
 
 #title{
@@ -278,4 +274,65 @@ body{
 
 #linkD:hover{
 	color: 	#B22222;
+}
+
+.container1 {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 200%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container1:hover .overlay {
+  opacity: 1;
+}
+
+#filmeHover {
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.container2{
+	position: absolute;
+	color: white;
+	padding:13px;
+	text-align: center;
+	background-color: #1C1C1C;	
+	top: 50%;
+	left:10%;
+	width:135%;
+	visibility: hidden;
+}
+
+#filmeIMDb{
+	position: absolute;
+	top: 85%;
+	left:10%;
+	-webkit-transform: translate(-10%, -90%);
+  	-ms-transform: translate(-10%, -90%);
+  	transform: translate(-10%, -90%);
+  	display: block;
+  	z-index: 1;
+}
+
+#icon{
+	height: 20px;
 }
