@@ -98,12 +98,17 @@ function tamNavBar(){
 	if (window.pageYOffset>160){
 		document.getElementById("imglogo").style.height="50px";
 		document.getElementById("imglogo").style.transition="0.5s";
+		document.getElementById("toup").style.transition="0.5s";
+		document.getElementById("toup").style.visibility="visible";
 	}
 
 	if (window.pageYOffset<1){
 		document.getElementById("imglogo").style.height="300px";
 		document.getElementById("imglogo").style.transition="0.5s";
+		document.getElementById("toup").style.transition="0.5s";
+		document.getElementById("toup").style.visibility="hidden";
 	}
+
 	
 }
 
