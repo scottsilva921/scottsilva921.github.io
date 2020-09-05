@@ -23,7 +23,7 @@ function openNav() {
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 	document.getElementById("main").style.marginLeft = "0";
-	document.body.style.backgroundColor = "white";
+	document.body.style.backgroundColor = "#000000";
 	}
 
 
@@ -58,7 +58,9 @@ function imgOut(){
 	o.remove();
 }
 
-function filmeOver(f, c, s){
+function filmeOver(i, f, c, s){
+	document.getElementById(i).style.height="230px";
+
 	document.getElementById(f).style.transition="0.3s ease";
 	document.getElementById(f).style.opacity="50%";
 
@@ -71,7 +73,9 @@ function filmeOver(f, c, s){
 	document.getElementById(s).style.visibility="visible";
 }
 
-function filmeOut(f, c, s){
+function filmeOut(i, f, c, s){
+	document.getElementById(i).style.height="220px";
+
 	document.getElementById(f).style.opacity="100%";
 
 	document.getElementById(c).style.top="50%";
@@ -84,7 +88,7 @@ function filmeOut(f, c, s){
 }
 
 function linkOver(e){
-	e.innerHTML += "<img src='https://upload.wikimedia.org/wikipedia/commons/8/84/Double_arrow_red.png' style='height:15px; padding-left:3px'>";
+	e.innerHTML += "<img src='imagens/nomehover.png' style='position:relative; height:16px; padding-left:6px'>";
 }
 
 function linkOut(e, text){
@@ -92,32 +96,38 @@ function linkOut(e, text){
 	
 }
 
+window.onscroll = function() {tamNavBar()};
+
 function tamNavBar(){
 
-	
-	if (window.pageYOffset>160){
-		document.getElementById("imglogo").style.height="50px";
-		document.getElementById("imglogo").style.transition="0.5s";
-		document.getElementById("toup").style.transition="0.5s";
-		document.getElementById("toup").style.visibility="visible";
-	}
+	toup=document.getElementById("toup")
+	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    toup.style.display = "block";
+  	}
+  	else {
+    toup.style.display = "none";
+  	}
 
-	if (window.pageYOffset<1){
-		document.getElementById("imglogo").style.height="300px";
-		document.getElementById("imglogo").style.transition="0.5s";
-		document.getElementById("toup").style.transition="0.5s";
-		document.getElementById("toup").style.visibility="hidden";
-	}
 
 	
 }
 
 function load(){
-	window.scrollTo(0,0)
+	window.scrollTo(0,0);
 	tamNavBar();
+}
+
+function loadF(){
+	window.scrollTo(0,0);
 }
 
 function alteraLen(id){
 	document.getElementById(id).style.height="50px";
 	document.getElementById(id).style.transition="0.5s";
+}
+
+function rolar(id){
+	var posY = document.getElementById(id).offsetTop-15;
+    window.scroll({top: posY, left: 0, behavior: 'smooth'});
+
 }
