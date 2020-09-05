@@ -6,27 +6,49 @@ iframe{
 
 body{
   font-family: Calibri;
+  color: white;
   margin: 0;
+  background-color: #000000;
+  
   }
 
+.parallax {
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%);
+}
+
+/*
 .divHead1{
   position: -webkit-sticky;
-    position: sticky;
-  text-align: center;
   background-color: #1C1C1C;
   opacity: 90%;
+  
+  position: relative;
+  text-align: center;
   padding: 20px;
   top: 0;
   left: 0;
   z-index: 10;
   }
+*/
 
 /*****************************/
 
 .container {
+  position: absolute;
   display: inline-block;
   cursor: pointer;
   float: left;
+  padding:20px;
+  top: 0px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -61,7 +83,7 @@ body{
   left: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 10px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -91,8 +113,27 @@ body{
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
+  background-color: black; /* For browsers that do not support gradients */
   transition: margin-left .5s;
   padding: 0px;
+ 
+}
+
+#main: after{
+   content: "";
+   clear: both;
+   display: table;
+}
+
+.coluna{
+  float: left;
+  width: 60%;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -122,7 +163,7 @@ body{
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -142,38 +183,41 @@ body{
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 90%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+
+
+.text {
+  max-width: 150px;
+  padding-top:6px;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.tooltip .tooltiptext::after {
+.text2{
+  position: relative;
+  padding-bottom: 10px; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  font-size: 13px;
+  font-weight: normal;
+  color:#C0C0C0;
+  float: left;
+  width: 50%;
+}
+
+/*.tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
-  border-style: solid;
+  /*border-style: solid;
   border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 0.9;
-}
+}*/
 
 /***************************************/
 
@@ -182,10 +226,13 @@ body{
 
 #imglogo{
   height:50px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 30px;
 }
 
 #imgfooter{
-  height: 60px;
+  height: 40px;
 }
 
 .nav1{
@@ -202,9 +249,13 @@ body{
   padding-bottom: 20px;
 }
 
+.div3{
+  text-align: center;
+  font-size: 18px;
+}
+
 .footer{
   text-align: center;
-  background-color: #363636;
   padding: 10px;
   z-index: 30;
 }
@@ -216,7 +267,7 @@ body{
 .button {
   background-color: white; /* Green */
   border: none;
-  color: black;
+  color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -225,7 +276,7 @@ body{
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-    border: 2px solid #8B0000;
+  border: 2px solid #8B0000;
   }
 
 .button:hover, .button:focus {
@@ -238,21 +289,13 @@ body{
   text-align: left;
   }
 
-#capas{
-  height: 150px;
+.capas{
+  height: 220px;
   padding: 5px;
   display: block;
-}
-
-#capas:hover{
-  transition-duration: 0.4s;
-  /*filter: opacity(85%);*/
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 5px rgba(0, 0, 0, 0.2);
-}
-
-#capas1{
-  height: 200px;
-  padding: 5px;
+  transition-duration: 0.3s;
+  border-radius: 9px;
+  z-index: 2;
 }
 
 
@@ -260,14 +303,46 @@ body{
   height: 30px;
 }
 
-#title{
+.title{
   text-align: left;
   font-size: 25px;
 }
 
+.play1{
+  height: 65px;
+  position: absolute;
+  top: 565px;
+  left:20px;
+}
+
+.play1:hover{
+  cursor: pointer;
+  transition-duration: 0.3s;
+  height: 68px;
+  filter: brightness(1.15);
+}
+
+.filmeDestaque{
+  font-size: 40px;
+  position: absolute;
+  top: 470;
+  left: 20px;
+  font-family: Calibri;
+  color: white;
+}
+
+.filmeDestaque2{
+  font-size: 25px;
+  position: absolute;
+  top: 510;
+  left: 20px;
+  font-family: Calibri;
+  color: white;
+}
+
 #linkD{
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 #linkD:active{
@@ -278,7 +353,31 @@ body{
   color:  #B22222;
 }
 
-.container1 {
+.linkC:link, .linkC:visited{
+  text-decoration: none;
+  color: white;
+  background-color: #000000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 2px;
+}
+
+.linkC:hover, .linkC:active{
+  background-color: #B22222;
+  cursor: pointer;
+}
+
+#linkH{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+#linkH:hover{
+  color:  #D3D3D3;
+}
+
+.container21 {
   position: relative;
   width: 50%;
 }
@@ -290,7 +389,7 @@ body{
   left: 0;
   right: 0;
   height: 100%;
-  width: 200%;
+  width: 100%;
   opacity: 0;
   transition: .3s ease;
 }
@@ -300,10 +399,10 @@ body{
 }
 
 #filmeHover {
-  color: black;
+  color: white;
   font-size: 20px;
   position: relative;
-  top: 50%;
+  top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -318,9 +417,9 @@ body{
   padding:13px;
   text-align: center;
   background-color: #1C1C1C;  
-  top: 50%;
-  left:10%;
-  width:135%;
+  top: 0%;
+  left:4%;
+  width:74%;
   visibility: hidden;
 }
 
@@ -340,9 +439,15 @@ body{
 }
 
 #toup{
-  visibility: hidden;
+  display: none;
   height: 50px;
   position: fixed;
-  top:80%;
-  left: 96%;
+  top:90%;
+  left: 95%;
   }
+
+#toup:hover{
+  transition: 0.3s;
+  opacity: 0.8;
+  cursor: pointer;
+}
