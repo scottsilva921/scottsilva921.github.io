@@ -59,18 +59,26 @@ function imgOut(){
 }
 
 function filmeOver(i, f, c, s){
+
 	document.getElementById(i).style.height="230px";
 
+	
 	document.getElementById(f).style.transition="0.3s ease";
 	document.getElementById(f).style.opacity="50%";
 
-	document.getElementById(c).style.top="81%"
+
+	document.getElementById(c).style.top="81%";
 	document.getElementById(c).style.transition="0.3s ease";
 	document.getElementById(c).style.visibility="visible";
 
+	/*
 	document.getElementById(s).style.top="3%";
-	document.getElementById(s).style.transition="0.3s ease"
+	document.getElementById(s).style.transition="0.3s ease";
 	document.getElementById(s).style.visibility="visible";
+	*/
+
+	
+
 }
 
 function filmeOut(i, f, c, s){
@@ -78,7 +86,7 @@ function filmeOut(i, f, c, s){
 
 	document.getElementById(f).style.opacity="100%";
 
-	document.getElementById(c).style.top="50%";
+	
 	document.getElementById(c).style.transition="0.1s";
 	document.getElementById(c).style.visibility="hidden";
 
@@ -112,9 +120,21 @@ function tamNavBar(){
 	
 }
 
-function load(){
+function stars(f,h,s){
+	var left=250;
+	for (var i=0;i<f;i++){
+		document.getElementById(s).innerHTML+='<img class="star" src="imagens/fullstar.png" style="left:'+left+'">';
+		left+=35;
+	}
+	if (h>0){
+		document.getElementById(s).innerHTML+='<img class="star" src="imagens/halfstar.png" style="left:'+left+'">';
+	}
+}
+
+function load(f,h,s){
 	window.scrollTo(0,0);
 	tamNavBar();
+	stars(f,h,s);
 }
 
 function loadF(){
@@ -130,4 +150,45 @@ function rolar(id){
 	var posY = document.getElementById(id).offsetTop-15;
     window.scroll({top: posY, left: 0, behavior: 'smooth'});
 
+}
+
+function modal(title, direcao, duracao, genero, full, half){
+	document.getElementById("tModal").innerHTML=title;
+
+	document.getElementById("cModal").innerHTML="Direção: "+direcao+"<br>";
+
+	document.getElementById("cModal").innerHTML+="Duração: "+duracao+"<br>";
+
+	document.getElementById("cModal").innerHTML+="Gênero: "+genero+"<br>";
+
+	var modal = document.getElementById("myModal");
+
+	var btn = document.getElementById("btn");
+
+	var span = document.getElementsByClassName("close")[0];
+
+	modal.style.display = "block";
+
+	var left=15;
+	for (var i=0;i<full;i++){
+		document.getElementById("Modal").innerHTML+='<img class="star2" src="imagens/fullstar.png" style="left:'+left+'">';
+		left+=3;
+	}
+	if (half>0){
+		document.getElementById("Modal").innerHTML+='<img class="star2" src="imagens/halfstar.png" style="left:'+left+'">';
+	}
+
+	span.onclick = function() {
+		modal.style.display = "none";
+		document.getElementById("Modal").innerHTML='';
+		document.getElementById("cModal").innerHTML='';
+	}
+
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+			document.getElementById("Modal").innerHTML='';
+			document.getElementById("cModal").innerHTML='';
+			}
+		}
 }
