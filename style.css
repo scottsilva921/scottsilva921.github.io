@@ -127,7 +127,7 @@ body{
 
 .coluna{
   float: left;
-  width: 60%;
+  width: 50%;
 }
 
 @media screen and (max-width:600px) {
@@ -309,7 +309,7 @@ body{
 }
 
 .play1{
-  height: 65px;
+  height: 55px;
   position: absolute;
   top: 565px;
   left:20px;
@@ -318,26 +318,38 @@ body{
 .play1:hover{
   cursor: pointer;
   transition-duration: 0.3s;
-  height: 68px;
+  height: 58px;
   filter: brightness(1.15);
 }
 
 .filmeDestaque{
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
-  top: 470;
-  left: 20px;
+  top: 480;
+  left: 26px;
   font-family: Calibri;
   color: white;
 }
 
 .filmeDestaque2{
-  font-size: 25px;
+  font-size: 20px;
   position: absolute;
-  top: 510;
-  left: 20px;
+  top: 520;
+  left: 26px;
   font-family: Calibri;
   color: white;
+}
+
+.star{
+  position: absolute;
+  top: 570px;
+  left: 250px;
+  height: 30px;
+}
+
+.star2{
+  position: relative;
+  height: 18px;
 }
 
 #linkD{
@@ -377,7 +389,7 @@ body{
   color:  #D3D3D3;
 }
 
-.container21 {
+.container2 {
   position: relative;
   width: 50%;
 }
@@ -388,8 +400,6 @@ body{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
   opacity: 0;
   transition: .3s ease;
 }
@@ -415,27 +425,20 @@ body{
   position: absolute;
   color: white;
   padding:13px;
-  text-align: center;
-  background-color: #1C1C1C;  
-  top: 0%;
-  left:4%;
   width:74%;
   visibility: hidden;
 }
 
 #filmeIMDb{
   position: absolute;
-  top: 85%;
-  left:10%;
-  -webkit-transform: translate(-10%, -90%);
-    -ms-transform: translate(-10%, -90%);
-    transform: translate(-10%, -90%);
-    display: block;
-    z-index: 1;
+  top: 71%;
+  left:77%;
+  
 }
 
-#icon{
-  height: 20px;
+.icon{
+  height: 25px;
+  cursor: pointer;
 }
 
 #toup{
@@ -451,3 +454,81 @@ body{
   opacity: 0.8;
   cursor: pointer;
 }
+
+/**********************************/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 25%;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  color: #000;
+  bottom: 50%;
+  background-color: rgba(128,0,0, 0.7);
+  width: 50%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  padding-bottom: 20px;
+  color: white;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #B22222;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+  
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: 100px; opacity: 0} 
+  to {bottom: 50%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: 100px; opacity: 0}
+  to {bottom: 50%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+/**********************************/
