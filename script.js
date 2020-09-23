@@ -134,6 +134,7 @@ function stars(f,h,s){
 function load(f,h,s){
 	window.scrollTo(0,0);
 	tamNavBar();
+	showSlides(slideIndex);
 	stars(f,h,s);
 }
 
@@ -153,6 +154,11 @@ function rolar(id){
 }
 
 function modal(title, direcao, duracao, genero, full, half){
+
+	document.getElementById("Modal").innerHTML='';
+	document.getElementById("cModal").innerHTML='';
+	document.getElementById("fModal").innerHTML='';
+
 	document.getElementById("tModal").innerHTML=title;
 
 	document.getElementById("cModal").innerHTML="Direção: "+direcao+"<br>";
@@ -160,6 +166,10 @@ function modal(title, direcao, duracao, genero, full, half){
 	document.getElementById("cModal").innerHTML+="Duração: "+duracao+"<br>";
 
 	document.getElementById("cModal").innerHTML+="Gênero: "+genero+"<br>";
+
+	document.getElementById("fModal").innerHTML+="<img class='icon2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IMDb_Logo_Square.svg/1200px-IMDb_Logo_Square.svg.png'>";
+	document.getElementById("fModal").innerHTML+="<img class='icon2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png'>";
+	document.getElementById("fModal").innerHTML+="<img class='icon2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Metacritic_logo_original.svg/1200px-Metacritic_logo_original.svg.png'>";
 
 	var modal = document.getElementById("myModal");
 
@@ -180,15 +190,13 @@ function modal(title, direcao, duracao, genero, full, half){
 
 	span.onclick = function() {
 		modal.style.display = "none";
-		document.getElementById("Modal").innerHTML='';
-		document.getElementById("cModal").innerHTML='';
 	}
 
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
-			document.getElementById("Modal").innerHTML='';
-			document.getElementById("cModal").innerHTML='';
 			}
 		}
 }
+
+
