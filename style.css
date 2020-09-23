@@ -127,6 +127,11 @@ body{
 
 .coluna{
   float: left;
+  width: 100%;
+}
+
+..coluna2{
+  float: left;
   width: 50%;
 }
 
@@ -155,7 +160,7 @@ body{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #000;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -170,7 +175,7 @@ body{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {background-color: #001}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -179,6 +184,11 @@ body{
 /***************************************/
 
 .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip1 {
   position: relative;
   display: inline-block;
 }
@@ -193,6 +203,7 @@ body{
   white-space: nowrap; 
   font-size: 15px;
   font-weight: bold;
+  text-align: left;
 }
 
 .text2{
@@ -206,6 +217,7 @@ body{
   color:#C0C0C0;
   float: left;
   width: 50%;
+  text-align: left;
 }
 
 /*.tooltip .tooltiptext::after {
@@ -265,7 +277,7 @@ body{
   }
 
 .button {
-  background-color: white; /* Green */
+  background-color: #000;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -287,6 +299,7 @@ body{
 
 #pages{
   text-align: left;
+  padding-top: 20px;
   }
 
 .capas{
@@ -382,7 +395,7 @@ body{
 #linkH{
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding-bottom: 2px;
 }
 
 #linkH:hover{
@@ -441,6 +454,12 @@ body{
   cursor: pointer;
 }
 
+.icon2{
+  height: 28px;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
 #toup{
   display: none;
   height: 50px;
@@ -460,11 +479,11 @@ body{
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 20; /* Sit on top */
   left: 25%;
   top: 0;
-  width: 50%; /* Full width */
-  height: 100%; /* Full height */
+   /* Full width */
+   /* Full height */
   overflow: auto; /* Enable scroll if needed */
   -webkit-animation-name: fadeIn; /* Fade in the background */
   -webkit-animation-duration: 0.4s;
@@ -477,7 +496,7 @@ body{
   position: fixed;
   color: #000;
   bottom: 50%;
-  background-color: rgba(128,0,0, 0.7);
+  background-color: rgba(128,0,0, 1);
   width: 50%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
@@ -497,7 +516,7 @@ body{
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: gray;
   text-decoration: none;
   cursor: pointer;
 }
@@ -509,6 +528,13 @@ body{
 }
 
 .modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+}
   
 
 /* Add Animation */
@@ -532,3 +558,76 @@ body{
   to {opacity: 1}
 }
 /**********************************/
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding-top: 20px;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: rgb(178,34,34);
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
