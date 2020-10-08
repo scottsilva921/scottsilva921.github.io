@@ -12,6 +12,27 @@ body{
   
   }
 
+/* width */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #1C1C1C; 
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #B22222;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #A52A2A; 
+}
+
 .parallax {
   /* Full height */
   height: 100%; 
@@ -307,8 +328,12 @@ body{
   padding: 5px;
   display: block;
   transition-duration: 0.3s;
-  border-radius: 9px;
   z-index: 2;
+}
+
+.cImagem{
+  max-height: 225px;
+  overflow: hidden;
 }
 
 
@@ -417,7 +442,17 @@ body{
   transition: .3s ease;
 }
 
+.container1{
+  max-width: 152.7px;
+  overflow: hidden;
+  padding-right: 3px;
+}
+
 .container1:hover .overlay {
+  opacity: 1;
+}
+
+.container11:hover .overlay {
   opacity: 1;
 }
 
@@ -495,9 +530,9 @@ body{
 .modal-content {
   position: fixed;
   color: #000;
-  bottom: 50%;
-  background-color: rgba(128,0,0, 1);
-  width: 50%;
+  top: 10%;
+  background-color: #1C1C1C;
+  width: 45%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
@@ -523,11 +558,16 @@ body{
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #B22222;
+  background-color: #1C1C1C;
   color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal hr{
+  width: 100%;
+  border-color: #4F4F4F;
+}
+
+.modal-body {padding: 2px 16px; float: left;}
 
 .modal-footer {
   padding: 2px 16px;
@@ -539,13 +579,13 @@ body{
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
-  from {bottom: 100px; opacity: 0} 
-  to {bottom: 50%; opacity: 1}
+  from {top: 100px; opacity: 0} 
+  to {top: 10%; opacity: 1}
 }
 
 @keyframes slideIn {
-  from {bottom: 100px; opacity: 0}
-  to {bottom: 50%; opacity: 1}
+  from {top: 100px; opacity: 0}
+  to {top: 10%; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
@@ -566,11 +606,33 @@ body{
 
 /* Slides */
 .mySlides {
-  display: none;
+  display: flex;
   padding-top: 20px;
   text-align: center;
   max-width: 100%;
-  overflow: hidden;
+  overflow-x: scroll;
+}
+
+/* width */
+.mySlides::-webkit-scrollbar {
+  height: 8px;
+  display: block;
+}
+
+/* Track */
+.mySlides::-webkit-scrollbar-track {
+  background: #000; 
+}
+ 
+/* Handle */
+.mySlides::-webkit-scrollbar-thumb {
+  background: #B22222;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.mySlides::-webkit-scrollbar-thumb:hover {
+  background: #A52A2A; 
 }
 
 /* Next & previous buttons */
@@ -583,7 +645,7 @@ body{
   padding: 16px;
   color: #888;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 0 3px 3px 0;
   user-select: none;
   text-decoration: none;
@@ -631,3 +693,42 @@ q {font-style: italic;}
 
 /* Add a blue color to the author */
 .author {color: cornflowerblue;}
+
+/***************************************/
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  text-align: left;
+}
