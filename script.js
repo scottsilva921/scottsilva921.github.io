@@ -178,7 +178,7 @@ function modal(title, direcao, duracao, genero, full, half, img){
 
 	modal.style.display = "block";
 
-	var left=15;
+	var left=0;
 	for (var i=0;i<full;i++){
 		document.getElementById("Modal").innerHTML+='<img class="star2" src="imagens/fullstar.png" style="left:'+left+'">';
 		left+=3;
